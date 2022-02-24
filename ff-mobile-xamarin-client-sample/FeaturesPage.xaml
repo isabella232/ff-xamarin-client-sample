@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ff_mobile_xamarin_client_sample.FeaturesPage">
+    <StackLayout Spacing="10">
+
+        <CollectionView ItemsSource="{Binding EnabledCards}" Margin="0" HeightRequest="300">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2"  />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView Padding="5">
+                        <Frame CornerRadius="5" Padding="8" HasShadow="True" BorderColor="LightGray" BackgroundColor="{Binding CardBackgroundColor}">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="165" />
+                      
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.ColumnSpan="2"
+                           Source="{Binding FeatureImage}"
+                           Aspect="AspectFit"
+                           VerticalOptions="Center"
+                           Grid.Row="0"/>
+
+                                <Image Grid.Column="1"
+                            Grid.Row="0"
+                            Margin="-8"
+                            IsVisible="{Binding ShowNewBadge}"
+                            Source="{Binding NewImage}" />
+                            </Grid>
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <CollectionView ItemsSource="{Binding FeatureCards}" >
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"  />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView Padding="5">
+                        <Frame CornerRadius="5" Padding="8" HasShadow="True" IsVisible="{Binding Available}" BorderColor="LightGray" BackgroundColor="{Binding CardBackgroundColor}">
+                            <Grid ColumnSpacing="5" RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="80" />
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.ColumnSpan="2"
+                           Source="{Binding FeatureImage}"
+                           Aspect="AspectFit"
+                           Grid.Row="0"/>
+
+                                <Image Grid.Column="1"
+                            Grid.Row="0"
+                            Margin="-8"
+                            IsVisible="{Binding ShowNewBadge}"
+                            Source="{Binding NewImage}" />
+
+                                <Label Grid.ColumnSpan="2"
+                             Grid.Row="1"
+                             IsVisible="{Binding HasEnableOption}"
+                             Text="{Binding Description}"
+                             FontSize="12"
+                             TextColor="{Binding DescriptionTextColor}"
+                             VerticalTextAlignment="Center"
+                             LineBreakMode="WordWrap" />
+
+                                <Label Grid.Column="0"
+                             Grid.Row="2"
+                             IsVisible="{Binding HasEnableOption}"
+                             Text="{Binding TrialPeriod, StringFormat='{0:D}-Day Trial'}"
+                             FontAttributes="Bold"
+                             TextColor="{Binding TrialLabelColor}"
+                             FontSize="12"
+                             HorizontalTextAlignment="Start"/>
+
+                                <Button Grid.Column="1"
+                            Grid.Row="2"
+                            Text="Enable"
+                            FontSize="12"
+                            BorderWidth="1"
+                            BorderRadius="5"
+                            IsVisible="{Binding HasEnableOption}"
+                            BorderColor="{Binding EnableButtonColor}"
+                            TextColor="{Binding EnableButtonColor}" />
+                            </Grid>
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

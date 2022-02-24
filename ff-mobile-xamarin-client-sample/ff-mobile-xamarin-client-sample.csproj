@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Model\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Assets\" />
+    <None Remove="Assets\cd.png" />
+    <None Remove="Assets\cd_dark.png" />
+    <None Remove="Assets\ce.png" />
+    <None Remove="Assets\ce_dark.png" />
+    <None Remove="Assets\cf.png" />
+    <None Remove="Assets\cf_dark.png" />
+    <None Remove="Assets\ci.png" />
+    <None Remove="Assets\cv.png" />
+    <None Remove="Assets\ci_dark.png" />
+    <None Remove="Assets\cv_dark.png" />
+    <None Remove="Assets\new.png" />
+    <None Remove="Assets\stats.png" />
+    <None Remove="Assets\stats_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\cd.png">
+      <LogicalName>cd.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cd_dark.png">
+      <LogicalName>cd_dark.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\ce.png">
+      <LogicalName>ce.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\ce_dark.png">
+      <LogicalName>ce_dark.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cf.png">
+      <LogicalName>cf.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cf_dark.png">
+      <LogicalName>cf_dark.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\ci.png">
+      <LogicalName>ci.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cv.png">
+      <LogicalName>cv.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\ci_dark.png">
+      <LogicalName>ci_dark.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cv_dark.png">
+      <LogicalName>cv_dark.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\new.png">
+      <LogicalName>new.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\stats.png">
+      <LogicalName>stats.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\stats_dark.png">
+      <LogicalName>stats_dark.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
