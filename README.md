@@ -8,12 +8,12 @@ Xamarin client uses Harness Binding library NuGet package for iOS and Android ap
 
 To reference Android binding library add package:
 ```
-Install-Package ff-android-xamarin-client-sdk-binding -Version 1.0.7.1
+Install-Package ff-android-xamarin-client-sdk -Version 0.5.0
 ```
 
 To reference iOS binding library add package:
 ```
-Install-Package ff-ios-xamarin-client-sdk-binding -Version 1.0.3
+Install-Package ff-ios-xamarin-client-sdk -Version 0.5.0
 ```
 
 ## Usage
