@@ -1,0 +1,10 @@
+ff-android-xamarin-client-sample/obj
+ff-ios-xamarin-client-sample/obj
+ff-mobile-xamarin-client-sample/bin
+ff-mobile-xamarin-client-sample/obj
+ff-mobile-xamarin-client-sample.Android/bin
+ff-mobile-xamarin-client-sample.Android/obj
+ff-mobile-xamarin-client-sample.iOS/obj
+ff-mobile-xamarin-client-sample.iOS/bin
+ff-ios-xamarin-client-sample/bin
+.vs
