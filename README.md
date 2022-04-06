@@ -4,11 +4,11 @@ This Demo App will demonstrate the usage and capabilities of Xamarin client SDK 
 
 ## Setup
 
-Xamarin client uses Harness Binding library NuGet package for iOS and Android application. 
+Xamarin client uses Harness Binding library NuGet package for iOS and Android application.
 
 To reference Android binding library add package:
 ```
-Install-Package ff-android-xamarin-client-sdk -Version 0.5.0
+Install-Package ff-android-xamarin-client-sdk -Version 0.5.2
 ```
 
 To reference iOS binding library add package:
@@ -61,7 +61,7 @@ public class CfListener : CfClientDelegate
     // Received in case of error
     public override void OnErrorWithError(CfErrorProxy error){}
 
-    // Contains array with flags received each pooling interval 
+    // Contains array with flags received each pooling interval
     public override void OnPollingEventReceivedWithEvaluations(CxEvaluation[] evaluations){}
 
     // Event when flag value is changed
@@ -72,7 +72,7 @@ public class CfListener : CfClientDelegate
 
     // On Stream opened event
     public override void OnStreamOpened() {}
-    
+
     // On Stream closed event
     public override void OnStreamCompleted() {}
 }
@@ -129,7 +129,7 @@ public class CfListener : Java.Lang.Object, IAuthCallback, IEventsListener
     {
         var eventType = p0.EventType;
         if(StatusEvent.EVENT_TYPE.SseStart == eventType)
-        { 
+        {
             // Stream started
         }
         else if( StatusEvent.EVENT_TYPE.SseEnd == eventType)
@@ -148,7 +148,7 @@ public class CfListener : Java.Lang.Object, IAuthCallback, IEventsListener
 
             var t = payload.JavaCast<ArrayList>();
             var arr = t.ToEnumerable<IO.Harness.Cfsdk.Cloud.Core.Model.Evaluation>().ToArray();
-            
+
             // Each pulling interval we will receive array of available flags.
 
         }
