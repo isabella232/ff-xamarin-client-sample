@@ -14,7 +14,7 @@ namespace ff_mobile_xamarin_client_sample.Droid
 {
     public class FeatureFlagClientAndroid : IFeatureFlagClient
     {
-        private static readonly string API_KEY = "27bb973c-5069-4406-9973-941c53478e7e";
+        private static readonly string API_KEY = "f544d0a3-6497-4c44-a0cc-c263a446df6b";
         private Context context = Android.App.Application.Context;
         private CfListener listener = null;
 

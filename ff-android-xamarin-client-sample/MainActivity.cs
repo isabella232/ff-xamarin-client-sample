@@ -15,7 +15,7 @@ namespace ff_xamarin_client_sample
     public class MainActivity : AppCompatActivity
     {
         CfListener listener;
-        private static readonly string API_KEY = "27bb973c-5069-4406-9973-941c53478e7e";
+        private static readonly string API_KEY = "78167c7d-329e-4704-9ef9-7f6e456825b6";
         private Context context = Android.App.Application.Context;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,10 +30,10 @@ namespace ff_xamarin_client_sample
             this.listener = new CfListener();
             listener.InitializationStatus += (sender, status) =>
             {
-                bool bRet = CfClient.Instance.BoolVariation("bool_flag", false);
-                string sRet = CfClient.Instance.StringVariation("string_flag", "none");
-                double fRet = CfClient.Instance.NumberVariation("number_flag", 1.0);
-                var jRet = CfClient.Instance.JsonVariation("json_flag", new Org.Json.JSONObject("{\"key\":\"value\"}"));
+                bool bRet = CfClient.Instance.BoolVariation("falg1", false);
+                string sRet = CfClient.Instance.StringVariation("flag3", "none");
+                double fRet = CfClient.Instance.NumberVariation("flag2", 1.0);
+                var jRet = CfClient.Instance.JsonVariation("flag4", new Org.Json.JSONObject("{\"key\":\"value\"}"));
 
                 MainThread.BeginInvokeOnMainThread(() =>
                 {

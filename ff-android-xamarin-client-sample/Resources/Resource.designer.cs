@@ -14,7 +14,7 @@ namespace ff_xamarin_client_sample
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.2.4.160")]
 	public partial class Resource
 	{
 		
@@ -153,6 +153,7 @@ namespace ff_xamarin_client_sample
 			global::Xamarin.Essentials.Resource.Id.text2 = global::ff_xamarin_client_sample.Resource.Id.text2;
 			global::Xamarin.Essentials.Resource.Id.time = global::ff_xamarin_client_sample.Resource.Id.time;
 			global::Xamarin.Essentials.Resource.Id.title = global::ff_xamarin_client_sample.Resource.Id.title;
+			global::Xamarin.Essentials.Resource.Id.view_tree_lifecycle_owner = global::ff_xamarin_client_sample.Resource.Id.view_tree_lifecycle_owner;
 			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::ff_xamarin_client_sample.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::ff_xamarin_client_sample.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::ff_xamarin_client_sample.Resource.Layout.browser_actions_context_menu_row;
